@@ -5,7 +5,7 @@
 #### a. View Input Angka
 
 ```php
-<main id="main">
+    <main id="main">
         <section class="labirin">
             <div class="c_box">
                 <div class="section-title">
