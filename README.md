@@ -1,5 +1,7 @@
-# MAZE-MATRIX
+# MAZE-MATRIX LARAVEL 8 
+## FITUR Laravel 8.x & bahasa pemrograman PHP
 
+### VIEW
 ```php
 <main id="main">
         <section class="labirin">
