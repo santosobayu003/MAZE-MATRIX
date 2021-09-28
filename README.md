@@ -126,7 +126,7 @@
                     </div>
                 </div>
 ```
-
+![HASIL-1](https://user-images.githubusercontent.com/59097891/135090741-d0816ab1-3582-4597-a816-367930db17be.png)
 
 ### 1. CONTROLLER
 ```php
