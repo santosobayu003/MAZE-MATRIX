@@ -33,6 +33,9 @@
 
 ```
 
+![INPUT-ANGKA](https://user-images.githubusercontent.com/59097891/135089695-4ef3d884-3e37-4048-9640-4c96cef5f43c.png)
+
+
 #### b. View Hasil Matrix Maze
 ```php
                 <div class="container">
