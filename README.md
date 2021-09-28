@@ -2,6 +2,8 @@
 ## FITUR Laravel 8.x & bahasa pemrograman PHP
 
 ### 1. VIEW
+#### a. View Input Angka
+
 ```php
 <main id="main">
         <section class="labirin">
