@@ -39,7 +39,7 @@
 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
-
+                            <!-- BEBERAPA VARIABLE YANG DI DAPAT DARI CONTROLLER  -->
                             <?php
                             $terkecil = $min;
                             $terbesar = $max;
@@ -47,11 +47,10 @@
                             $second_last = $max - 1;
                             $kel = $min + 4;
                             ?>
+                            <!-- /BEBERAPA VARIABLE YANG DI DAPAT DARI CONTROLLER  -->
 
                             <table style="margin:5px auto">
                                 <?php for ($i = 1; $i <= $inputan; $i++) { ?>
-
-
                                     <?php if ($i == $min) { ?>
                                         <!-- JIKA BARIS PERTAMA -->
                                         <tr>
@@ -71,7 +70,6 @@
                                             <td><?php $i ?></td>
                                         </tr>
                                         <tr>
-
                                             <?php for ($j = 1; $j <= $inputan; $j++) { ?>
                                                 <td>
                                                     <h2 style="color: <?= ($j == $second_last) ? "white" : "black"; ?>">@</h2>
@@ -85,7 +83,6 @@
                                             <td><?php $i ?></td>
                                         </tr>
                                         <tr>
-
                                             <?php for ($j = 1; $j <= $inputan; $j++) { ?>
                                                 <td>
                                                     <h2 style="color: <?= ($j != $min and $j != $max) ? "white" : "black"; ?>">@</h2>
@@ -113,7 +110,6 @@
                                             <td><?php $i ?></td>
                                         </tr>
                                         <tr>
-
                                             <?php for ($j = 1; $j <= $inputan; $j++) { ?>
                                                 <td>
                                                     <h2 style="color: <?= ($j == $second_first) ? "white" : "black"; ?>">@</h2>
