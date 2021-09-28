@@ -34,6 +34,103 @@
 
 ```
 
+#### b. View Hasil Matrix Maze
+```php
+<div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+
+                            <?php
+                            $terkecil = $min;
+                            $terbesar = $max;
+                            $second_first = $min + 1;
+                            $second_last = $max - 1;
+                            $kel = $min + 4;
+                            ?>
+
+                            <table style="margin:5px auto">
+                                <?php for ($i = 1; $i <= $inputan; $i++) { ?>
+
+
+                                    <?php if ($i == $min) { ?>
+                                        <!-- JIKA BARIS PERTAMA -->
+                                        <tr>
+                                            <td><?php $i ?></td>
+                                        </tr>
+                                        <tr>
+                                            <?php for ($j = 1; $j <= $inputan; $j++) { ?>
+                                                <td>
+                                                    <h2 style="color: <?= ($j == $second_first) ? "white" : "black"; ?>">@</h2>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <!-- JIKA BARIS PERTAMA -->
+                                    <?php } elseif ($i == $max) { ?>
+                                        <!-- JIKA BARIS TERAKHIR -->
+                                        <tr>
+                                            <td><?php $i ?></td>
+                                        </tr>
+                                        <tr>
+
+                                            <?php for ($j = 1; $j <= $inputan; $j++) { ?>
+                                                <td>
+                                                    <h2 style="color: <?= ($j == $second_last) ? "white" : "black"; ?>">@</h2>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <!-- JIKA BARIS TERAKHIR -->
+                                    <?php } elseif ($i % 2 == 0) { ?>
+                                        <!-- BARIS DENGAN BILANGAN GENAP -->
+                                        <tr>
+                                            <td><?php $i ?></td>
+                                        </tr>
+                                        <tr>
+
+                                            <?php for ($j = 1; $j <= $inputan; $j++) { ?>
+                                                <td>
+                                                    <h2 style="color: <?= ($j != $min and $j != $max) ? "white" : "black"; ?>">@</h2>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <!-- /BARIS DENGAN BILANGAN GENAP -->
+                                    <?php } elseif ($i % 2 !== 0 & $i % 4 !== 1) { ?>
+                                    <!-- BARIS DENGAN BILANGAN GENAP TAPI JIKA DI BAGI BILANGAN 4 TIDAK MEMILIKI SISA 1 -->
+                                        <tr>
+                                            <td><?php $i ?></td>
+                                        </tr>
+                                        <tr>
+
+                                            <?php for ($j = 1; $j <= $inputan; $j++) { ?>
+                                                <td>
+                                                    <h2 style="color: <?= ($j == $second_last) ? "white" : "black"; ?>">@</h2>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <!-- /BARIS DENGAN BILANGAN GENAP TAPI JIKA DI BAGI BILANGAN 4 TIDAK MEMILIKI SISA 1 -->
+                                    <?php } elseif ($i % 4 == 1) { ?>
+                                    <!-- BARIS DENGAN  BILANGAN YANG DI BAGI 4 MEMILIKI SISA 1 -->
+                                        <tr>
+                                            <td><?php $i ?></td>
+                                        </tr>
+                                        <tr>
+
+                                            <?php for ($j = 1; $j <= $inputan; $j++) { ?>
+                                                <td>
+                                                    <h2 style="color: <?= ($j == $second_first) ? "white" : "black"; ?>">@</h2>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <!-- /BARIS DENGAN  BILANGAN YANG DI BAGI 4 MEMILIKI SISA 1 -->
+                                    <?php } ?>
+
+                                <?php } ?>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+```
+
+
 ### 1. CONTROLLER
 ```php
 <?php
