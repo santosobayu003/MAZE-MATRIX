@@ -1,7 +1,7 @@
 # MAZE-MATRIX LARAVEL 8 
 ## FITUR Laravel 8.x & bahasa pemrograman PHP
 
-### VIEW
+### 1. VIEW
 ```php
 <main id="main">
         <section class="labirin">
@@ -31,3 +31,38 @@
     </main>
 
 ```
+
+### 1. CONTROLLER
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class C_maze extends Controller
+{
+    public function index()
+    {
+        return view('labirin');
+    }
+
+    public function input_angka(Request $request)
+    {
+        $angka = $request->angka;
+        $kosong = [];
+        for ($i = 1; $i <= $angka; $i++) {
+            $kosong[] = $i;
+        }
+        $data = [
+            "angka" => $kosong,
+            "max" => $angka,
+            "min" => 1,
+            "inputan" => $angka,
+        ];
+        return view('hasil_labirin', $data);
+    }
+}
+```
+
+
