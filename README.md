@@ -21,7 +21,6 @@
                                     <label for="exampleInputName1">Masukan angka</label>
                                     <input name="angka" id="angka" type="number" class="form-control">
                                 </div>
-
                                 <button type="submit" class="btn-sm" style="float: right;">Lihat hasil</button>
                             </form>
                         </div>
@@ -36,7 +35,7 @@
 
 #### b. View Hasil Matrix Maze
 ```php
-<div class="container">
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <!-- BEBERAPA VARIABLE YANG DI DAPAT DARI CONTROLLER  -->
@@ -96,7 +95,6 @@
                                             <td><?php $i ?></td>
                                         </tr>
                                         <tr>
-
                                             <?php for ($j = 1; $j <= $inputan; $j++) { ?>
                                                 <td>
                                                     <h2 style="color: <?= ($j == $second_last) ? "white" : "black"; ?>">@</h2>
@@ -132,7 +130,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class C_maze extends Controller
